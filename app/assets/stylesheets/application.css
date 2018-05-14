@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+ .article {
+   overflow: hidden;
+ }
+ 
+ .article img {
+   height: 50px;
+ }
+ 
+ .book {
+  overflow: hidden;
+}
+.book img {
+ height: 70px;
+}
+

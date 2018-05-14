@@ -1,0 +1,21 @@
+
+  <% articles.each do |article| %>
+    <div class="articles">
+      <div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row article">
+              <div class="col-xs-4">
+            <img src="/images/increments-square.png">
+              </div>
+              <div class="col-xs-8">
+            <p class="article-title">
+              <a href="<%= article["link"]["href"] %>" target="_blank"><%= article["title"] %></a>
+            </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>

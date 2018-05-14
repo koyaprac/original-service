@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <ul class='nav nav-tabs'>
+        <li class='nav-item'>
+            <a href="#All" class="nav-link" data-toggle="tab">All</a>
+        </li>
+        <li class='nav-item'>
+            <a href="#Qiita" class="nav-link" data-toggle="tab">Qiita</a>
+        </li>
+        <li class='nav-item'>
+            <a href="#GoogleNews" class="nav-link" data-toggle="tab">Google News</a>
+        </li>
+    </ul>
+    <div class='tab-content'>
+        <div id='All' class='tab-pane active'>
+            <%= render "articles", articles: @articles %>
+        </div>
+        <div id='Qiita' class='tab-pane'>
+            <p>aaaaaaaa</p>
+        </div>
+        <div id='GoogleNews' class='tab-pane'>
+            <p>googlenews</p>
+        </div>
+    </div>
+    
+  </div>
+</div>
