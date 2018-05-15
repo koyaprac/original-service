@@ -1,0 +1,13 @@
+<% if current_user.readlater?(article) %>
+  <%= form_tag(user_art_connect_path(article.id), method: :delete) do %>
+    <%= hidden_field_tag :article_id, article.id %>
+    <%= hidden_field_tag :type, 'Readlater' %>
+    <%= submit_tag 'あとで読む 済み', class: 'btn btn-success' %>
+  <% end %>
+<% else %>
+  <%= form_tag(user_art_connects_path) do %>
+    <%= hidden_field_tag :article_id, article.id %>
+    <%= hidden_field_tag :type, 'Readlater' %>
+    <%= submit_tag 'あとで読む', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>

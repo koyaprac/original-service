@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   
   get 'articles', to: 'articles#index'
   get 'books', to: 'books#index'
+  
+  resources :user_art_connects, only: [:create, :destroy]
 end

@@ -30,10 +30,21 @@ class BooksController < ApplicationController
       http.get(uri.request_uri)
     end
     @result = JSON.parse(response.body)
-    
-    @books = []
+    Book.destroy_all
     @result['Items'].each do |item|
-      @books << item['Item']
+      item = item['Item']
+      book = Book.new
+      book.attributes = {
+        url: item['itemUrl'],
+        title: item['title'],
+        image_url: item['smallImageUrl'],
+        salesdate: item['salesDate'],
+        itemprice: item['itemPrice']
+      }
+      if book.save
+        next
+      end
     end
+    @books = Book.all
   end
 end

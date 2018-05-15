@@ -13,15 +13,16 @@
     </ul>
     <div class='tab-content'>
         <div id='All' class='tab-pane active'>
-            <%= render "articles", articles: @articles %>
+            <%= render "articles", articles: @all %>
         </div>
         <div id='Qiita' class='tab-pane'>
-            <p>aaaaaaaa</p>
+            <%= render "articles", articles: @qiita %>
         </div>
         <div id='GoogleNews' class='tab-pane'>
-            <p>googlenews</p>
+            <%= render "articles", articles: @gn %>
         </div>
     </div>
     
   </div>
+  <p><%= @aaa %></p>
 </div>

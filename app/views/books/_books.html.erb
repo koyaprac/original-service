@@ -6,13 +6,13 @@
           <div class="panel-body">
             <div class="row book">
               <div class="col-xs-4">
-            <img src="<%= book['smallImageUrl'] %>" >
+            <img src="<%= book['image_url'] %>" >
               </div>
               <div class="col-xs-8">
             <p class="book-title">
-              <a href="<%= book["itemUrl"] %>" target="_blank"><%= book["title"] %></a>
+              <a href="<%= book["url"] %>" target="_blank"><%= book["title"] %></a>
             </p>
-            <p>発売日: <%= book['salesDate'] %> 価格: <%= book['itemPrice'] %>円 </p>
+            <p>発売日: <%= book['salesdate'] %> 価格: <%= book['itemprice'] %>円 </p>
             </div>
             </div>
           </div>

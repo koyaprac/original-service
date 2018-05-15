@@ -5,14 +5,23 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="row article">
-              <div class="col-xs-4">
-            <img src="/images/increments-square.png">
+              <div class="col-xs-2">
+            <img src= <%= article['image_url'] %> >
               </div>
-              <div class="col-xs-8">
-            <p class="article-title">
-              <a href="<%= article["link"]["href"] %>" target="_blank"><%= article["title"] %></a>
-            </p>
+              <div class="col-xs-10">
+                <p class="article-title">
+                  <a href="<%= article['url'] %>" target="_blank"><%= article["title"] %></a>
+                </p>
+                <p> <%= article['date'] %> </p>
+              </div>
             </div>
+            <div class='row'>
+              <div class="col-xs-6 text-right">
+                <%= render '/user_art_connects/readlater_button', article: article %>
+              </div>
+              <div class='col-xs-6'>
+                <%= render '/user_art_connects/favorite_button', article: article %>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,2 @@
+class Favorite < UserArtConnect
+end
