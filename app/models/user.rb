@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :favorite_items, through: :favorites, class_name: 'Article', source: :article
   has_many :readlaters
   has_many :readlater_items, through: :readlaters, class_name: 'Article', source: :article
+  has_many :memos
+  has_many :memo_items, through: :memos, class_name: 'Memo', source: :memo
   
   def favorite(article)
     self.favorites.find_or_create_by(article_id: article.id)

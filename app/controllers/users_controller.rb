@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:show]
-  before_action :correct_user, only: [:show]
+  before_action :require_user_logged_in, only: [:show, :myart, :update]
+  before_action :correct_user, only: [:show, :myart]
   
   def show
     @user = User.find(params[:id])
@@ -30,6 +30,10 @@ class UsersController < ApplicationController
     end
   end
   
+  def myarts
+    @favorites = current_user.favorite_items
+    @readlaters = current_user.readlater_items
+  end
   private
   
   def user_params

@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
         </button>
         <% if logged_in? %>
-          <%= link_to 'ML Media', user_path(current_user), class: 'navbar-brand'%>
+          <%= link_to 'ML Media', myarts_user_path(current_user), class: 'navbar-brand'%>
         <% else %>
           <a class="navbar-brand" href="/">ML Media</a>
         <% end %>
@@ -30,6 +30,9 @@
               <ul class='dropdown-menu'>
                 <li>
                   <%= link_to 'My page', user_path(current_user) %>
+                </li>
+                <li>
+                  <%= link_to '保存した記事', myarts_user_path(current_user) %>
                 </li>
                 <li role='separator' class='divider'></li>
                 <li>

@@ -7,6 +7,7 @@ class CreateUserArtConnects < ActiveRecord::Migration[5.0]
       t.text :content
 
       t.timestamps
+      t.index [:user_id, :article_id , :type], unique: true
     end
   end
 end
